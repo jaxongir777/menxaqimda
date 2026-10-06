@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.small-title {
+  color: #38bdf8;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #38bdf8;
+}
+
+.description {
+  max-width: 600px;
+  color: #cbd5e1;
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  border: none;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  border: 1px solid #38bdf8;
+  background: transparent;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.hero-card {
+  width: 320px;
+  padding: 40px 25px;
+  text-align: center;
+  border: 1px solid #334155;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.hero-card h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.hero-card p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills span {
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #38bdf8;
+  font-size: 14px;
+}
+
+/* Telefon uchun */
+@media (max-width: 800px) {
+  .hero {
+    padding: 50px 25px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+/* =========================
+   TELEFON POPUP
+========================= */
+
+.phone-popup {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 9999;
+
+  animation: phonePopup 0.4s ease;
+}
+
+.phone-box {
+  position: relative;
+
+  width: 320px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: #0f172a;
+
+  border: 1px solid #38bdf8;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(56, 189, 248, 0.15);
+}
+
+.phone-icon {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 35px;
+}
+
+.phone-box h3 {
+  margin-bottom: 10px;
+
+  color: white;
+
+  font-size: 18px;
+}
+
+.phone-box p {
+  margin-bottom: 20px;
+
+  color: #38bdf8;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+/* Qo‘ng‘iroq tugmasi */
+
+.call-button {
+  display: inline-block;
+
+  padding: 11px 20px;
+
+  background: #38bdf8;
+
+  color: #0f172a;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.call-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* Yopish tugmasi */
+
+.close-phone {
+  position: absolute;
+
+  top: 10px;
+  right: 12px;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.close-phone:hover {
+  color: white;
+
+  transform: rotate(90deg);
+}
+
+/* Popup animatsiyasi */
+
+@keyframes phonePopup {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Telefon */
+
+@media (max-width: 500px) {
+  .phone-popup {
+    width: calc(100% - 30px);
+
+    top: 15px;
+  }
+
+  .phone-box {
+    width: 100%;
+
+    padding: 22px;
+  }
+}
+
+/* Desktop */
+/* asosiy CSS */
+
+
+/* Tablet */
+@media (max-width: 900px) {
+  /* Header tablet uchun */
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  /* Header telefon uchun */
+}
+
+
+/* Kichik telefon */
+@media (max-width: 400px) {
+  /* Header kichik telefon uchun */
+}

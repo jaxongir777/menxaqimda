@@ -1,0 +1,454 @@
+.about {
+  min-height: 100vh;
+  padding: 100px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+
+  overflow: hidden;
+}
+
+/* Kichik sarlavha */
+.about-small-title {
+  margin-bottom: 10px !important;
+
+  color: #38bdf8 !important;
+  font-size: 15px !important;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+/* Asosiy sarlavha */
+.about h1 {
+  margin-bottom: 25px;
+
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  animation: titleAnimation 0.8s ease;
+}
+
+.about h1 span {
+  color: #38bdf8;
+}
+
+/* Asosiy matn */
+.about-description {
+  max-width: 700px;
+
+  margin: 0 auto 45px !important;
+
+  color: #cbd5e1 !important;
+
+  font-size: 20px !important;
+  line-height: 1.7;
+
+  animation: textAnimation 1s ease;
+}
+
+/* Shaxsiy ma'lumotlar */
+.personal-info {
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 60px;
+
+  animation: cardsAnimation 1.2s ease;
+}
+
+/* Ma'lumot kartasi */
+.info-card {
+  min-height: 170px;
+
+  padding: 25px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid #334155;
+  border-radius: 15px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Karta hover */
+.info-card:hover {
+  transform: translateY(-8px);
+
+  background: rgba(56, 189, 248, 0.08);
+
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Icon */
+.info-icon {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 30px;
+
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  transform: scale(1.15);
+}
+
+/* Karta sarlavhasi */
+.info-card h3 {
+  margin: 0 0 8px;
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Karta matni */
+.info-card p {
+  margin: 0 !important;
+
+  color: #94a3b8 !important;
+
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+/* Qiziqishlar sarlavhasi */
+.about h2 {
+  margin-bottom: 30px;
+
+  color: white;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  animation: textAnimation 1.3s ease;
+}
+
+/* Texnologiyalar */
+.about-skills {
+  max-width: 800px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  animation: skillsAnimation 1.5s ease;
+}
+
+/* Skill */
+.about-skills span {
+  padding: 14px 25px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #38bdf8;
+
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Skill hover */
+.about-skills span:hover {
+  background: #38bdf8;
+
+  color: #0f172a;
+
+  border-color: #38bdf8;
+
+  transform: translateY(-7px) scale(1.05);
+
+  box-shadow:
+    0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+/* Skill bosilganda */
+.about-skills span:active {
+  transform: translateY(-2px) scale(0.97);
+}
+
+/* =========================
+   ANIMATSIYALAR
+========================= */
+
+@keyframes titleAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardsAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skillsAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .about {
+    padding: 90px 6%;
+  }
+
+  .personal-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about h1 {
+    font-size: 55px;
+  }
+}
+
+/* =========================
+   TABLET / KICHIK EKRAN
+========================= */
+
+@media (max-width: 800px) {
+  .about {
+    padding: 80px 5%;
+  }
+
+  .about h1 {
+    font-size: 48px;
+  }
+
+  .about-description {
+    font-size: 18px !important;
+  }
+
+  .personal-info {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 650px;
+  }
+
+  .about h2 {
+    font-size: 27px;
+  }
+}
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 600px) {
+  .about {
+    min-height: 100vh;
+
+    padding: 70px 20px;
+  }
+
+  .about-small-title {
+    font-size: 13px !important;
+
+    letter-spacing: 3px;
+  }
+
+  .about h1 {
+    font-size: 40px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    font-size: 16px !important;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px !important;
+  }
+
+  .personal-info {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 15px;
+
+    margin-bottom: 45px;
+  }
+
+  .info-card {
+    width: 100%;
+
+    min-height: 150px;
+
+    padding: 22px;
+  }
+
+  .info-icon {
+    font-size: 28px;
+  }
+
+  .info-card h3 {
+    font-size: 16px;
+  }
+
+  .info-card p {
+    font-size: 14px !important;
+  }
+
+  .about h2 {
+    font-size: 24px;
+
+    margin-bottom: 20px;
+  }
+
+  .about-skills {
+    gap: 10px;
+  }
+
+  .about-skills span {
+    padding: 11px 17px;
+
+    font-size: 14px;
+  }
+
+  .about-skills span:hover {
+    transform: translateY(-5px) scale(1.03);
+  }
+}
+
+/* =========================
+   JUDA KICHIK TELEFON
+========================= */
+
+@media (max-width: 400px) {
+  .about {
+    padding: 60px 15px;
+  }
+
+  .about-small-title {
+    font-size: 12px !important;
+
+    letter-spacing: 2px;
+  }
+
+  .about h1 {
+    font-size: 34px;
+  }
+
+  .about-description {
+    font-size: 15px !important;
+  }
+
+  .info-card {
+    min-height: 140px;
+
+    padding: 20px;
+  }
+
+  .about h2 {
+    font-size: 21px;
+  }
+
+  .about-skills span {
+    padding: 9px 14px;
+
+    font-size: 13px;
+  }
+}
+
+/* Desktop */
+/* asosiy CSS */
+
+
+/* Tablet */
+@media (max-width: 900px) {
+  /* Hero tablet uchun */
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  /* Hero telefon uchun */
+}
+
+
+/* Kichik telefon */
+@media (max-width: 400px) {
+  /* Hero kichik telefon uchun */
+}

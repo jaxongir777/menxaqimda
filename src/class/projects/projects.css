@@ -1,0 +1,526 @@
+.projects {
+  min-height: 100vh;
+
+  padding: 100px 10%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b
+  );
+
+  color: white;
+
+  overflow: hidden;
+}
+
+/* =========================
+   KICHIK SARLAVHA
+========================= */
+
+.projects-small-title {
+  margin-bottom: 12px !important;
+
+  color: #38bdf8 !important;
+
+  font-size: 15px !important;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  animation: projectTitle 0.8s ease;
+}
+
+/* =========================
+   ASOSIY SARLAVHA
+========================= */
+
+.projects h1 {
+  margin-bottom: 20px;
+
+  font-size: 60px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  animation: projectTitle 0.9s ease;
+}
+
+.projects h1 span {
+  color: #38bdf8;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.projects-description {
+  max-width: 700px;
+
+  margin: 0 auto 60px !important;
+
+  color: #cbd5e1 !important;
+
+  font-size: 19px !important;
+
+  line-height: 1.7;
+
+  animation: projectText 1s ease;
+}
+
+/* =========================
+   PROJECTS LIST
+========================= */
+
+.projects-list {
+  width: 100%;
+
+  max-width: 1100px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  animation: cardsAnimation 1.2s ease;
+}
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid #334155;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+
+/* Yuqoridagi chiziq */
+
+.project-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: #38bdf8;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.4s ease;
+}
+
+/* Hover */
+
+.project-card:hover {
+  transform: translateY(-10px);
+
+  background: rgba(56, 189, 248, 0.06);
+
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25),
+    0 0 25px rgba(56, 189, 248, 0.12);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* =========================
+   PROJECT NUMBER
+========================= */
+
+.project-number {
+  margin-bottom: 20px;
+
+  color: #38bdf8;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+/* =========================
+   PROJECT TITLE
+========================= */
+
+.project-card h2 {
+  margin-bottom: 15px;
+
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   PROJECT DESCRIPTION
+========================= */
+
+.project-card > p {
+  margin: 0 0 25px !important;
+
+  color: #94a3b8 !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.project-technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+.project-technologies span {
+  padding: 7px 11px;
+
+  color: #38bdf8;
+
+  background: rgba(56, 189, 248, 0.08);
+
+  border: 1px solid #334155;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-technologies span:hover {
+  background: #38bdf8;
+
+  color: #0f172a;
+
+  border-color: #38bdf8;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   PROJECT BUTTON
+========================= */
+
+.project-button {
+  margin-top: auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 11px 18px;
+
+  color: #0f172a;
+
+  background: #38bdf8;
+
+  border: 1px solid #38bdf8;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-button:hover {
+  background: transparent;
+
+  color: #38bdf8;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.project-button:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+/* =========================
+   ANIMATSIYALAR
+========================= */
+
+@keyframes projectTitle {
+  from {
+    opacity: 0;
+
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes projectText {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardsAnimation {
+  from {
+    opacity: 0;
+
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .projects {
+    padding: 90px 6%;
+  }
+
+  .projects h1 {
+    font-size: 52px;
+  }
+
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+  .project-card {
+    min-height: 310px;
+
+    padding: 25px;
+  }
+}
+
+/* =========================
+   KICHIK TABLET
+========================= */
+
+@media (max-width: 700px) {
+  .projects {
+    padding: 80px 20px;
+  }
+
+  .projects-small-title {
+    font-size: 13px !important;
+
+    letter-spacing: 3px;
+  }
+
+  .projects h1 {
+    font-size: 43px;
+
+    letter-spacing: -1px;
+  }
+
+  .projects-description {
+    font-size: 17px !important;
+
+    line-height: 1.6;
+
+    margin-bottom: 45px !important;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+
+    max-width: 450px;
+
+    gap: 20px;
+  }
+
+  .project-card {
+    min-height: 300px;
+
+    padding: 25px;
+  }
+
+  .project-card h2 {
+    font-size: 25px;
+  }
+}
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 500px) {
+  .projects {
+    padding: 70px 15px;
+  }
+
+  .projects h1 {
+    font-size: 36px;
+  }
+
+  .projects-description {
+    font-size: 15px !important;
+  }
+
+  .project-card {
+    min-height: 290px;
+
+    padding: 22px;
+
+    border-radius: 16px;
+  }
+
+  .project-number {
+    margin-bottom: 15px;
+
+    font-size: 13px;
+  }
+
+  .project-card h2 {
+    font-size: 23px;
+
+    margin-bottom: 12px;
+  }
+
+  .project-card > p {
+    font-size: 14px !important;
+
+    margin-bottom: 20px !important;
+  }
+
+  .project-technologies {
+    gap: 6px;
+
+    margin-bottom: 20px;
+  }
+
+  .project-technologies span {
+    padding: 6px 9px;
+
+    font-size: 11px;
+  }
+
+  .project-button {
+    padding: 10px 15px;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   JUDA KICHIK TELEFON
+========================= */
+
+@media (max-width: 400px) {
+  .projects {
+    padding: 60px 12px;
+  }
+
+  .projects-small-title {
+    font-size: 11px !important;
+
+    letter-spacing: 2px;
+  }
+
+  .projects h1 {
+    font-size: 32px;
+  }
+
+  .projects-description {
+    font-size: 14px !important;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h2 {
+    font-size: 21px;
+  }
+}
